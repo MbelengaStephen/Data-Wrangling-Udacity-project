@@ -1,0 +1,78 @@
+Wrangle Report by Mbelenga Stephen.
+
+This document briefly describes the wrangling efforts for the WeRateDogs Twitter dataset in the wrangle_act.ipynb notebook.
+
+Gathering Data
+The dataset was gather through the following methods:
+
+Given File - twitter_archive_enhanced.csv
+
+File hosted on Udacity's servers - image_predictions.tsv
+
+Query of Twitter API - tweet_json.txt
+
+twitter_archive_enhanced.csv
+
+Using the pandas library, .csv files were read directly into a DataFrame.
+
+image_predictions.tsv
+Using the requests library, files hosted on Udacity server was programmatically downloaded. Once downloaded, the pandas library was used to read in the .tsv into a DataFrame.
+
+tweet_json.txt
+Using the tweepy and json libraries, the tweets were written into a .txt file.
+
+Assessing Data
+Once the data has all been gathered into individual DataFrames, the data is assessed both visually and programmatically to look for quality and tidiness issues.
+
+Programmatic Methods:
+
+.head()
+.info()
+.duplicated()
+.value_counts()
+.isna()
+.query()
+.sum()
+
+Data quality issues were categorised by completeness, validity, accuracy, and consistency. The tidiness issues were categorised using tidy data approach.
+
+Quality Issues
+1. Missing Values
+2.Incorrect dog names.
+3. Some replies do not have images.
+4. There was a lot of incorrect data entries especially with twitter archive data.
+5. Timestamp column was a string, tweet_id too was an integer, just to point a few.
+
+
+Tidiness Issues
+1. Four columns for  dog stages 'doggo, pupper, puppo, floofer' should be  under one category column.
+2. Retweet count and favorite count should be appended to twitter archive table.
+
+Cleaning
+This section will discuss some of the cleaning efforts I undertake.
+
+Problem #1: Missing and incorrect dog names.
+
+Many tweets introduce dog's name in the beginning  with "named ...".
+
+
+745 entries were recorded where the dog's name is "None".
+
+In addition on further assessing, the dog's name was either lowercase or labeled incorrectly.
+
+The cleaning effort tried to correct the dog's name by filtering the incorrectly labeled tweets, and finding their name in the body of the text.
+
+
+More effort can be put to correctly extract the dog names from the tweets.
+
+Problem #2: Extracting nested dictionaries and lists from JSON creates messy data.
+
+While trying to normalize the JSON files, it resulted in many empty columns and Series of lists that proved difficult to work with.
+
+To solve this issue, only the columns of interest were extracted.
+
+Additional insights may be derived from appropriate handling of the Twitter API JSON files.
+
+Problem #3: Many image predictions were not dog breeds.
+
+For the majority of predictions there where are no dog predictions, the majority of the images did not have a dog in the picture or they were duplicated.

@@ -1,0 +1,29 @@
+Act Report By Mbelenga Stephen
+
+Insights.
+1. Tweets categorized as Doggo,puppo have received the most count on average.
+2. An increase in retweet count has a direct proportion with an increase in favorite count.
+3. Moving average makes it easier and cleaner to plot the data.
+4. The favourite count and retweet count seems to increase over time.
+
+The following visualizations are generated from the final anysis and visualization of the project.
+
+The first Visual (bar chart) on dog stage show how different dog stages have different counts (retweet and favorite) from  users.
+
+Doggo puppo has the highest while pupper had the lowest average.
+
+The second visual which is a scatter plot shows the relationship between retweet count and favorite count which imply that an increase in favorite count correspond to an increase in retweet count.
+
+There can be many paterns that can be found by asking different questions like:
+
+1. Which dog breeds that have the most count/likes.
+2. Dog tweet with many likes.
+3. Do dogs with higher rating have many likes?
+4. What are the most favorite dog breeds?
+
+
+Due to time constarint, the anlysis take a very long time to uncover more patterns and results. 
+
+
+Find images attached on the zipfile.
+
